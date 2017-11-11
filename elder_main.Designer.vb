@@ -65,7 +65,7 @@ Partial Class elder_main
         Me.Button2.Text = "HRÁT MÍNÍ 2"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Form1
+        'elder_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -75,8 +75,8 @@ Partial Class elder_main
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "Form1"
-        Me.Text = "Míní Launcher ELDER v1.0.5"
+        Me.Name = "elder_main"
+        Me.Text = "Míní Launcher ELDER v1.1"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)

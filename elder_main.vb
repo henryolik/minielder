@@ -24,6 +24,7 @@ Public Class elder_main
         Dim osVer As Version = Environment.OSVersion.Version
         If IsConnectionAvailable() = True Then
             CheckForUpdates()
+            msg()
         End If
         Me.Show()
         If osVer.Major = 6 And osVer.Minor = 0 Then
@@ -31,9 +32,15 @@ Public Class elder_main
         ElseIf osVer.Major = 6 And osVer.Minor = 1 Then
             MsgBox("Používáte systém Windows 7, toto je verze spouštěče určená pro Windows 98, ME, 2000 a XP. Stáhněte si, prosím klasickou verzi na https://ministudios.ml")
         ElseIf osVer.Major = 6 And osVer.Minor = 2 Then
-            MsgBox("Používáte systém Windows 8 nebo vyšší, toto je verze spouštěče určená pro Windows 98, ME, 2000 a XP. Stáhněte si, prosím klasickou verzi na https://ministudios.ml")
-        ElseIf osVer.Major = 6 And osVer.Minor = 3 Then
-            MsgBox("Používáte systém Windows 8.1, toto je verze spouštěče určená pro Windows 98, ME, 2000 a XP. Stáhněte si, prosím klasickou verzi na https://ministudios.ml")
+            If My.Computer.Info.OSFullName.Contains("10") Then
+                MsgBox("Používáte systém Windows 10, toto je verze spouštěče určená pro Windows 98, ME, 2000 a XP. Stáhněte si, prosím klasickou verzi na https://ministudios.ml")
+            Else
+                If My.Computer.Info.OSFullName.Contains("8.1") Then
+                    MsgBox("Používáte systém Windows 8.1, toto je verze spouštěče určená pro Windows 98, ME, 2000 a XP. Stáhněte si, prosím klasickou verzi na https://ministudios.ml")
+                else
+                    MsgBox("Používáte systém Windows 8, toto je verze spouštěče určená pro Windows 98, ME, 2000 a XP. Stáhněte si, prosím klasickou verzi na https://ministudios.ml")
+                End If
+            End If
         End If
     End Sub
     Public Sub CheckForUpdates()
@@ -73,4 +80,30 @@ Public Class elder_main
             Return False
         End Try
     End Function
+
+    Public Sub msg()
+        Dim MyVer As String = My.Application.Info.Version.ToString
+        Dim osVer As Version = Environment.OSVersion.Version
+        Dim wc As WebClient = New WebClient()
+        Dim os As String = Nothing
+        If osVer.Major = 4 And osVer.Minor = 10 Then
+            os = "98"
+        End If
+        If osVer.Major = 4 And osVer.Minor = 90 Then
+            os = "me"
+        End If
+        If osVer.Major = 5 And osVer.Minor = 0 Then
+            os = "2000"
+        End If
+        If osVer.Major = 5 And osVer.Minor = 1 Then
+            os = "xp"
+        End If
+        If Not os = Nothing Then
+            Dim msg As String = Application.StartupPath & "/msg.txt"
+            wc.DownloadFile(New Uri("http://nonssl.dl.ministudios.ml/mini/elder/msgs/" & MyVer & "/" & os & "msg.txt"), msg)
+            If Not My.Computer.FileSystem.ReadAllText(msg) = "" Then
+                MsgBox(My.Computer.FileSystem.ReadAllText(msg), MsgBoxStyle.Information, "Oznámení")
+            End If
+        End If
+    End Sub
 End Class
