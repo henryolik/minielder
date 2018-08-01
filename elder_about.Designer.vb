@@ -29,7 +29,6 @@ Partial Class elder_about
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.cb_beta = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'Label2
@@ -38,9 +37,9 @@ Partial Class elder_about
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
         Me.Label2.Location = New System.Drawing.Point(12, 9)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(295, 25)
+        Me.Label2.Size = New System.Drawing.Size(313, 25)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Verze launcheru: 1.1 (build 7)"
+        Me.Label2.Text = "Verze launcheru: 1.1.1 (build 8)"
         '
         'Label3
         '
@@ -65,47 +64,36 @@ Partial Class elder_about
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(12, 152)
+        Me.Label5.Location = New System.Drawing.Point(12, 128)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(46, 13)
         Me.Label5.TabIndex = 4
-        Me.Label5.Text = "v1.7.0.1"
+        Me.Label5.Text = "v1.8.0.1"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
-        Me.Label6.Location = New System.Drawing.Point(177, 123)
+        Me.Label6.Location = New System.Drawing.Point(205, 123)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(186, 20)
+        Me.Label6.Size = New System.Drawing.Size(161, 20)
         Me.Label6.TabIndex = 6
-        Me.Label6.Text = "© Míní studios corp. 2017"
+        Me.Label6.Text = "© henryolik, 2017 - 18"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(250, 152)
+        Me.Label7.Location = New System.Drawing.Point(82, 130)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(107, 13)
+        Me.Label7.Size = New System.Drawing.Size(100, 13)
         Me.Label7.TabIndex = 7
-        Me.Label7.Text = "https://ministudios.ml"
-        '
-        'cb_beta
-        '
-        Me.cb_beta.AutoSize = True
-        Me.cb_beta.Location = New System.Drawing.Point(12, 123)
-        Me.cb_beta.Name = "cb_beta"
-        Me.cb_beta.Size = New System.Drawing.Size(159, 17)
-        Me.cb_beta.TabIndex = 8
-        Me.cb_beta.Text = "Připojit se do beta testování"
-        Me.cb_beta.UseVisualStyleBackColor = True
+        Me.Label7.Text = "https://henryolik.ga"
         '
         'elder_about
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(369, 171)
-        Me.Controls.Add(Me.cb_beta)
+        Me.ClientSize = New System.Drawing.Size(369, 147)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -125,5 +113,4 @@ Partial Class elder_about
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents cb_beta As System.Windows.Forms.CheckBox
 End Class

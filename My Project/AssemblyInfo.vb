@@ -10,9 +10,9 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("Míní Launcher Elder")> 
 <Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("Míní studios corp.")> 
+<Assembly: AssemblyCompany("henryolik")> 
 <Assembly: AssemblyProduct("Míní Launcher Elder")> 
-<Assembly: AssemblyCopyright("Míní studios corp. ©  2017")> 
+<Assembly: AssemblyCopyright("© henryolik 2017 - 18")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.7.0.1")> 
-<Assembly: AssemblyFileVersion("1.7.0.1")> 
+<Assembly: AssemblyVersion("1.8.0.1")> 
+<Assembly: AssemblyFileVersion("1.8.0.1")> 
